@@ -1,0 +1,247 @@
+@import './partials/_variables.scss';
+@import './partials/_mixins.scss';
+@import './partials/_colors.scss';
+@import 'fonts.scss';
+
+/* New mediaqueries for 2023 */
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+
+    body.path-not-frontpage-user section.ftco-section .login-wrap,
+    body.path-not-frontpage-user section.ftco-section .text-wrap {
+
+        width: 100%;
+    }
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+    body.path-not-frontpage-user section.ftco-section .login-wrap,
+    body.path-not-frontpage-user section.ftco-section .text-wrap {
+
+        width: 100%;
+    }
+
+    // responsive menu start
+
+    ul.sf-menu.sf-style-white li:hover,
+    ul.sf-menu.sf-style-white li.sfHover,
+    ul.sf-menu.sf-style-white a:hover,
+    ul.sf-menu.sf-style-white span.nolink:hover {
+        background: #ecf0f1;
+        outline: 0;
+    }
+
+    ul.sf-menu.sf-style-white a,
+    ul.sf-menu.sf-style-white a:visited,
+    ul.sf-menu.sf-style-white span.nolink {
+        color: $primary;
+    }
+
+    ul.sf-menu.sf-style-white a.is-active,
+    ul.sf-menu.sf-style-white a:focus {
+        background: $primary !important;
+        color: $white;
+        padding: 1.25em 1em;
+    }
+
+    .menu-block ul.sf-menu .sf-sub-indicator:after {
+        font-size: 18px;
+    }
+
+    .sf-accordion-toggle.sf-style-white {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+
+    }
+
+    div.sf-accordion-toggle.sf-style-white a {
+        background: $white;
+        border: none;
+        color: $primary;
+        display: block;
+        font-weight: bold;
+        padding: 0px;
+        position: relative;
+        text-align: center;
+        border-radius: 6px;
+        width: 50px;
+        height: 50px;
+        box-sizing: border-box;
+
+        &.sf-expanded {
+            background: $clouds-light;
+            color: $primary;
+            border: none;
+        }
+    }
+
+    div.sf-accordion-toggle {
+        transition: 0.3s ease-in-out;
+
+        &.sf-style-white>a:after {
+            font-family: "Material Symbols Outlined";
+            content: "\e5d2";
+            font-size: 2em;
+            position: absolute !important;
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%) !important;
+            width: 100%;
+        }
+
+        &.sf-style-white>a.sf-expanded:after {
+            font-family: "Material Symbols Outlined";
+            content: "\e5cd";
+            font-size: 2em;
+            position: absolute !important;
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%) !important;
+            width: 100%;
+        }
+    }
+
+    ul#superfish-main-accordion.menu.sf-menu.sf-accordion.sf-expanded {
+        // display: flex;
+        // flex-direction: row;
+        // justify-content: flex-start;
+        // align-items: center;
+        float: none;
+        margin: 0;
+        border: 1px solid $silver;
+        margin-top: 15px;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0px 3px 5px 1px $clouds;
+        position: relative;
+        // &:after{
+        //     content: " ";
+        //     position: absolute;
+        //     width: 0; 
+        //     height: 0; 
+        //     border-left: 7px solid transparent;
+        //     border-right: 7px solid transparent;
+        //     border-bottom: 10px solid black;
+        //     top: 0;
+        //     right: 0;
+        //     z-index: 2;
+        //     visibility: visible !important;
+        // }
+
+
+        li {
+            text-align: left;
+            background: $white !important;
+            border-bottom: 1px solid $silver;
+            box-sizing: border-box;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            a {
+                text-decoration: none;
+                padding: 1.25em 1em;
+            }
+
+            ul.sf-has-clone-parent {
+                li {
+                    border: none !important;
+                    transition: 0.3s ease;
+
+                    a {
+                        background: $white;
+                        border: none !important;
+
+                        &:hover {
+                            background: $clouds-light;
+                        }
+                    }
+
+                    &:hover {
+                        background: $clouds-light;
+                    }
+                }
+            }
+        }
+    }
+
+    // responsive menu ends
+
+    .search-block {
+        margin-top: 2em;
+    }
+
+    .event-update-wrap {
+        .event-date {
+            min-height: 150px;
+
+            .event-date-wrap {
+
+                .event-date-only {
+                    font-size: 36px;
+                }
+
+                .event-month {
+                    font-size: 20px;
+                }
+
+                .event-time {
+                    font-size: 16px;
+                    color: $clouds;
+                }
+
+            }
+        }
+
+        .event-details {
+            min-height: 200px;
+            border-right: none;
+            text-align: center;
+            width: 80%;
+            margin: 0 auto;
+
+            .event-desc {
+                font-size: 20px;
+            }
+        }
+
+        .event-details-view {
+            min-height: 100px;
+            border-top: 2px dashed $white;
+        }
+    }
+
+    .webform-submission-newsleter-subscription-form {
+        width: 100%;
+    }
+
+    .welcome-inner-wrap {
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    .outter-padding {
+        padding: 30px 0px 90px 0px;
+    }
+
+    .services-widget-inner-wrap {
+        position: relative !important;
+        top: 0px !important;
+        padding: 30px 0px 30px 0px;
+    }
+
+    .slide-show-wrapper {
+        .stickey-header-wrapper {
+            position: relative !important;
+            top: 0px !important;
+        }
+    }
+
+    .logoarea-white {
+        text-align: center;
+    }
+}

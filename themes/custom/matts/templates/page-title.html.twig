@@ -1,0 +1,21 @@
+{#
+/**
+* @file
+* Theme override for page titles.
+*
+* Available variables:
+* - title_attributes: HTML attributes for the page title element.
+* - title_prefix: Additional output populated by modules, intended to be
+* displayed in front of the main title tag that appears in the template.
+* - title: The page title, for use in the actual content.
+* - title_suffix: Additional output populated by modules, intended to be
+* displayed after the main title tag that appears in the template.
+*/
+#}
+<div class="main-title-wrap">
+  <div class="container text-center">
+    {% if title %}
+    <h1 class="animate__animated animate__flipInY">{{ title }}</h1>
+      {% endif %}
+  </div>
+</div>

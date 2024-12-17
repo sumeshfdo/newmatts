@@ -1,0 +1,12 @@
+name: 'Back to top with progress scrollbar'
+type: module
+description: 'Provides a Back to top progressbar block.'
+core_version_requirement: ^8 || ^9 || ^10
+package: 'Back to top with progress scrollbar'
+dependencies:
+  - drupal:block
+
+# Information added by Drupal.org packaging script on 2024-01-06
+version: '1.0.2'
+project: 'back_to_top_with_pi'
+datestamp: 1704528462

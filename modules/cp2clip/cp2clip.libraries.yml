@@ -1,0 +1,7 @@
+cp2clip.global:
+  version: 2.x
+  css:
+    component:
+      css/cp2clip.css: {}
+  js:
+    js/cp2clip.js: {}

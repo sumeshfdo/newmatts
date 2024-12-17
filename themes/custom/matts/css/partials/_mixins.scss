@@ -1,0 +1,194 @@
+@mixin font-light {
+    font-family: 'Poppins-Light', sans-serif !important;
+    font-weight: 300 !important;
+}
+
+@mixin font-regular {
+    font-family: 'Poppins-Regular', sans-serif !important;
+    font-weight: normal !important;
+}
+
+@mixin font-medium {
+    font-family: 'Poppins-Medium', sans-serif !important;
+    font-weight: 500 !important;
+}
+
+@mixin font-semibold {
+    font-family: 'Poppins-SemiBold', sans-serif !important;
+    font-weight: 600 !important;
+}
+
+@mixin font-bold {
+    font-family: 'Poppins-Bold', sans-serif !important;
+    font-weight: 700 !important;
+}
+
+@mixin horizontally-align {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin hnv-align {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin socialmedia-icons {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    display: block;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 50%;
+    text-indent: -9999px;
+    width: 107px;
+    height: 107px;
+    border: 3px solid $white;
+}
+
+@mixin btn-common-mixin ($minin-btn-bg: $primary, $minin-after-btn-bg: $secondary, $minin-before-btn-bg: $secondary) {
+    background: $minin-btn-bg;
+    border: none;
+    border-radius: 27px;
+    font-size: 16px;
+    @include font-regular;
+
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    color: $white;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $minin-after-btn-bg;
+        border-radius: 27px;
+        z-index: -2;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: darken($minin-before-btn-bg, 10%);
+        transition: all .3s;
+        border-radius: 27px;
+        z-index: -1;
+    }
+
+    &:hover {
+        color: $white;
+
+        &:before {
+            width: 100%;
+        }
+    }
+
+    &.btn-xl {
+        padding: 0.75rem 2.5rem;
+        @include font-semibold;
+        font-size: 19px;
+    }
+
+    &.btn-md {
+        padding: 0.65rem 1.8rem;
+        @include font-regular;
+    }
+}
+
+@mixin pager-btn {
+    border: 1px solid $clouds;
+    padding: 10px 17px;
+    margin: 0;
+    text-decoration: none;
+    font-size: 12px;
+
+    span {
+        font-size: 12px;
+        text-decoration: none;
+    }
+}
+
+
+@mixin btn-outlined-mixin {
+    background: $white;
+    border: 1px solid $primary;
+    border-radius: 27px;
+    font-size: 16px;
+    @include font-regular;
+
+    padding: 0.5rem 1.2rem;
+    color: $primary;
+    transition: ease-out 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: inset 0 0 0 0 $primary;
+
+    &:hover {
+        color: $white;
+        // background: $primary;
+        box-shadow: inset 100px 0 0 0 $primary;
+        cursor: pointer;
+
+    }
+
+    &.btn-xl {
+        padding: 0.75rem 2.5rem;
+        @include font-semibold;
+        font-size: 19px;
+    }
+
+    &.btn-md {
+        padding: 0.65rem 1.8rem;
+        @include font-regular;
+    }
+}
+
+@mixin btn-submit-mixin {
+    @include font-regular;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    display: inline-block;
+    outline: none;
+    border-radius: 27px;
+    font-size: 16px;
+    cursor: pointer;
+    color: $white;
+    background-color: $primary;
+    box-shadow: inset 0 0 0 0 $secondary;
+    -webkit-transition: ease-out 0.3s;
+    -moz-transition: ease-out 0.3s;
+    transition: ease-out 0.3s;
+
+    &:hover {
+        background-color: $primary;
+        box-shadow: inset 400px 0 0 0 $secondary;
+    }
+
+    &.btn-xl {
+        padding: 0.75rem 2.5rem;
+        @include font-semibold;
+        font-size: 19px;
+    }
+
+    &.btn-md {
+        padding: 0.65rem 1.8rem;
+        @include font-regular;
+    }
+}

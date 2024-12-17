@@ -1,0 +1,78 @@
+<?php
+
+/**
+ * @file
+ * Adds the library to every page and provides a help.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Primary module hooks for Copy to Clipboard module.
+ */
+function cp2clip_preprocess_page(array &$variables) : void {
+  $variables['#attached']['library'][] = 'cp2clip/cp2clip.global';
+}
+
+/**
+ * Implements hook_help().
+ */
+function cp2clip_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.cp2clip':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('The Copy to Clipboard module is a tiny module
+that allows a copy to clipboard capability by simply adding a class
+"cp-to-clip" to any block or inline HTML element.
+<br>
+e.g.
+&lt;div class="cp-to-clip"&gt; Text ....&lt;/div&gt;
+        ') . '</p>';
+      $output .= '<p>' . t('The module attaches a javascript file with no
+dependencies and a css file to every page, which add a "copy" button to the end
+of the text. Clicking the button copies the text to the clipboard.
+        ') . '</p>';
+      $output .= '<h3>' . t('Uses') . '</h3>';
+      $output .= '<dl>';
+      $output .= '<dt>' . t('To automatically add a copy to clipboard
+capability of a block of text, by adding a class "cp-to-clip" to the HTML
+tag that encloses the text.
+        ') . '</dt>';
+      $output .= '<dt>' . t('
+        ') . '</dt>';
+      $output .= '</dl>';
+      $output .= '<dt>' . t('<h3>Installation Instructions:</h3>') . '</dt>';
+      $output .= '<dd>' . t('Install the cp2clip module as any other drupal
+        module:') . '</dd>';
+      $output .= '<dd>' . t('
+        <pre class="cp-to-clip">composer require drupal/cp2clip</pre>') . '</dd>';
+      $output .= '<h3>' . t('Configuration') . '</h3>';
+      $output .= '<dd><p>' . t('
+        There is no configuration page and none is required.
+        ') . '</p></dd>';
+      $output .= '<dd>' . t('
+        To add classes to tags in the ckeditor: you can add a set of styles
+        for the tags that would be used to copy to clipboard. Edit the text
+        format and add the styles dropdown to the Active Toolbar for any
+        given text format; if you intend to allow the full_html format to
+        have the styles dropdown go to
+        <a href=":full_html">full_html</a> and add a list of styles as follows<br>
+<pre class="cp-to-clip">
+p.cp-to-clip   |p copy to clipboard
+span.cp-to-clip|span copy to clipboard
+div.cp-to-clip |div copy to clipboard
+</pre>
+      for the p, span, and div tags. Other tags can be added accordingly.
+         ', [
+           ':full_html' => '/admin/config/content/formats/manage/full_html',
+         ]) . '</dd>';
+      $output .= '<dt>' . t('<h3>Tests:</h3>') . '</dt>';
+      $output .= '<dd>' . t('Tests are available. They can be run as follows
+        <pre class="cp-to-clip">
+./vendor/bin/phpunit -v -c $dir/web/core/phpunit.xml ./web/modules/contrib/cp2clip/tests/src/FunctionalJavascript/
+        </pre>
+        assuming that the web folder is the root and the phpunit.xml file is web/core folder.') . '</dd>';
+      return $output;
+  }
+}

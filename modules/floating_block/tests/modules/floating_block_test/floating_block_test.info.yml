@@ -1,0 +1,11 @@
+name: 'Floating Block Test'
+type: module
+description: 'Provides pages with an element on it that can be configured to float.'
+package: Testing
+dependencies:
+  - floating_block:floating_block
+
+# Information added by Drupal.org packaging script on 2024-10-10
+version: '2.0.1'
+project: 'floating_block'
+datestamp: 1728573219

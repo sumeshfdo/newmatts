@@ -1,0 +1,16 @@
+global-css:
+  version: 1.0
+  css:
+    theme:
+      css/styles.css: {}
+      css/responsive.css: {}
+      css/bootstrap.min.css: {}
+      css/print.css: { media: print }
+      https://fonts.googleapis.com/css?family=Poppins: { type: external }
+      https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined: { type: external }
+      https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css: { type: external }
+  js:
+    js/custom.js{}
+    js/bootstrap.min.js{}
+  dependencies:
+    - core/jquery

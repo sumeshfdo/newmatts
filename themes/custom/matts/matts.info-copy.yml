@@ -1,0 +1,30 @@
+name: St Matthews Anglican Church
+type: theme
+description: "St. Matthews Anglican Church Holland Park Wesite"
+package: custom
+version: "1.0.0"
+core_version_requirement: ^10
+base theme: stable9
+screenshot: screenshot.png
+libraries:
+  - matts/global-css
+regions:
+  header: Header
+  mainmenu: Main Menu
+  site_search: Site Search
+  main_slider: Main Slider
+  main_services_focus: Main services
+  welcome: Welcome Block
+  content: Content
+  upcoming_events: Upcoming Events
+  news_letters: News Letters
+  timetable: Timetable
+  livestreaming_block: Live Streaming
+  latest_blog_articles: Latest Blog Articles
+  offerings_section: Offerings Section
+  subscribe_section: Subscribe Section
+  find_us_section: Find us Section
+  logoareawhite: Footer Logo
+  aboutlinks: Footer about links
+  resourceslinks: Footer resources links
+  contactlinks: Footer contact links

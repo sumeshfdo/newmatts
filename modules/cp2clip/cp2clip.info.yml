@@ -1,0 +1,11 @@
+name: 'Copy to Clipboard'
+type: module
+description: 'Provides a sitewide copy to clipboard facility to copy text
+  inside a &lt;p class=&quot;cp-to-clip&quot;&gt;TEXT&lt;/p&gt;'
+package: UI
+core_version_requirement: ^10 || ^11
+
+# Information added by Drupal.org packaging script on 2024-08-12
+version: '1.0.1-rc2'
+project: 'cp2clip'
+datestamp: 1723423825
